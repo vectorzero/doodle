@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Doodle</title>
+    <style>
+        .section {
+            padding: 4em 0;
+            text-align: center;
+        }
+        .section.section-hero .outer {
+            background-image: url("images/base.png");
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        @-webkit-keyframes groove{
+            from{-webkit-transform:translate3d(-30px, 0, 0);
+                transform:translate3d(-30px, 0, 0)}
+            to{-webkit-transform:translate3d(30px, 0, 0);transform:translate3d(30px, 0, 0)}}
+        @keyframes groove{
+            from{-webkit-transform:translate3d(-30px, 0, 0);transform:translate3d(-30px, 0, 0)}to{-webkit-transform:translate3d(30px, 0, 0);transform:translate3d(30px, 0, 0)}}
+        .section.section-hero .outer .inner {
+            -webkit-animation: groove 3s infinite alternate ease-in-out;
+            animation: groove 3s infinite alternate ease-in-out;
+            /*background: url("https://mirumee.com/img/header-overlay.png") 50% 0 no-repeat;*/
+            /*background: url("images/header-overlay.png") 50% 0 no-repeat;*/
+            background: url("images/header.png") 50% 0 no-repeat;
+            background-size: auto 100%;
+            margin: 0 -10px;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
+    <div class="section section-hero">
+        <div class="outer">
+            <div class="inner"></div>
+        </div>
+    </div>  
     <a href="component/Audio.html">Audio</a>
 </body>
 </html>
